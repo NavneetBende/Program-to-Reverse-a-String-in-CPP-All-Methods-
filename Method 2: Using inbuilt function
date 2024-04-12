@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    // declare string
+    string str = "PrepInsta";
+    
+    cout << "Before Reversal: " << str;
+    
+    // reverse which is defined under the header file 
+    // algorithm #include
+    // str.begin() denotes the start 
+    // and str.end() denotes end
+    
+    reverse(str.begin(), str.end());
+    
+    cout << "\nAfter Reversal: "<< str;
+    
+    return 0;
+}
