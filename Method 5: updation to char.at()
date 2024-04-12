@@ -1,0 +1,35 @@
+/* Write a C++ program to accept the string from the user 
+and print the string in reverse order. in order to 
+solve this problem use at() function. */
+#include <iostream>
+using namespace std;
+ 
+void revstr(string str)
+{
+    int i, len;
+    char temp;
+    len = str.length();
+
+    for (i = 0; i < len / 2; i++) {
+        
+        // using str.at() function
+        // str.at() returns char at index in a string
+        // can throw out of range exception if requested index out of bounds
+        temp = str.at(i);
+        str.at(i) =str.at(len - i - 1);
+        str[len - i - 1] = temp;
+    }
+    cout << "After reversing the string: " << str << endl;    
+}
+ 
+// Driver code
+int main()
+{
+    string str("PrepInsta");
+    
+    cout << "Before reversing the string: " << str << endl;
+    
+    revstr(str);
+    
+    return 0;
+}
